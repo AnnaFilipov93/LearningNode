@@ -1,14 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-//import the modle you wanna use-> in this case
-//to create a post in the posts DS
 const Post = require('../models/Post');
 
-//To add something after the / like localhost:3000/posts
-//here its always posts and that why we use '/'
-
-//Get all the posts that we did
+//Get all the posts 
 router.get('/', async (req, res) => {
     try{
         const posts = await Post.find();

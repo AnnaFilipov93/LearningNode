@@ -9,17 +9,9 @@ const cors = require('cors');
 //Require package to get the .env file
 require('dotenv/config');
 
-//Middlewares
-//A function that run everytime when ever we hit
-//this post
-/*app.use('/posts', () => {
-    console.log('Hello this is a middleeare running');
-
-});*/
 app.use(cors());
 
-//Every time we hit any request we want to
-//transform it to json
+//Every time we hit any request we want to transform it to json
 app.use(bodyParser.json());
 
 //Import Routes
@@ -31,7 +23,6 @@ app.use('/posts', postRoute);
 
 
 //Roudes
-//'/' => mean local host (nothing) => localhost:3000/
 app.get('/', (req, res) => {
     res.send('We are on home');
 } );

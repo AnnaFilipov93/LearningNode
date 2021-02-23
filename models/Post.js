@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-//Require how the data lookes
+//Give post object a structure 
 const PostSchema = mongoose.Schema({
     title: {
         type: String,
@@ -16,21 +16,7 @@ const PostSchema = mongoose.Schema({
 
     }
 });
-//Empty 
-/*
-const PostSchema = mongoose.Schema({
-    title: String,
-    description: String,
-    date: Date.now
-})
 
-*/
 
-//User schema
-mongoose.Schema({
-    username: String,
-    password: String
-});
-
-//Export schema ('give it a name', schema it should use)
+//Export schema 
 module.exports = mongoose.model('Posts', PostSchema);
